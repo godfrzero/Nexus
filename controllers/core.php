@@ -74,7 +74,7 @@ function parseMessages($posts) {
 		$index = 0;
 		ob_start();
 		while($post = mysqli_fetch_assoc($posts)) {
-			$pillar[$index++ % 3] .= "<div class='message'><h2>" . $post["Title"] . "</h2><p>" . $post["Content"] . "</p><div class='postDetails'>" . $post["OwnerName"] . " @ " . $post['Time'] . "</div></div>";
+			$pillar[$index++ % 3] .= "<div class='message'><h2>" . stripslashes($post["Title"]) . "</h2><p>" . stripslashes($post["Content"]) . "</p><div class='postDetails'>" . $post["OwnerName"] . " @ " . $post['Time'] . "</div></div>";
 		}
 		foreach($pillar as $column) {
 			echo "<div class='messagePillar'>" . $column . "</div>";
