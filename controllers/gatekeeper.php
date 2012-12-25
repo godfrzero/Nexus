@@ -98,12 +98,12 @@ if(isset($_POST['eMail']) && isset($_POST['pWord']) && isValidEmail($_POST['eMai
 	}
 } else {
 	// Default code, dealing with errors?
-		//echo "{Status: 'Failure', Reason: 'General Failure: Unknown Command'}";
+		echo "{Status: 'Failure', Reason: 'General Failure: Unknown Command'}";
 	// Testing code only, return parameters as they were received:
-		$value = '';
-		foreach($_POST as $field) {
-			$values .= $field;
-		}
-		echo "{Status: 'Failure', Reason: 'A " . $values . "'}";
+		// $value = '';
+		// foreach($_POST as $field) {
+		// 	$values .= $field;
+		// }
+		// echo "{Status: 'Failure', Reason: 'A " . $values . "'}";
 }
 ?>
