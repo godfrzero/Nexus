@@ -26,8 +26,8 @@ if(isset($_SESSION['Key']) && isset($_SESSION['User'])) {
 		echo '{ Status: "Failure", Reason: "Post must include content or title" }';
 	}
 } else {
-	// echo '{ Status: "Failure", Reason: "Session Error", Redirect: "'.$location.'"}';
-	echo '{ Status: "Failure", Reason: "Session Error"}';
+	echo '{ Status: "Failure", Reason: "Session Error", Redirect: "'.$location.'"}';
+	// echo '{ Status: "Failure", Reason: "Session Error"}';
 }
 
 ?>
