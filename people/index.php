@@ -47,7 +47,7 @@
       // Highlight people who are already being followed
       if(following[1]) {
         for(personID in following) {
-          console.log(following[personID] + ' is being followed');
+          // console.log(following[personID] + ' is being followed');
           if(following[personID].length) {
             var thisChild = getElement(following[personID]);
             $(thisChild).html('Click to Unfollow');
@@ -61,11 +61,11 @@
         var $thisElement = this;
         var thisStatus = this.children[2];
         var thisID = thisStatus.id;
-        console.log($thisElement, thisStatus, thisID);
+        // console.log($thisElement, thisStatus, thisID);
 
         var newFollowing = [];
         for(thisPerson in following) {
-          console.log(following[thisPerson]);
+          // console.log(following[thisPerson]);
           if(!(thisID == following[thisPerson])) {
             // Clicked person and matched person aren't the same, take no action
             newFollowing.push(following[thisPerson]);
@@ -85,7 +85,7 @@
         }
         following = newFollowing;
         // Let see the result of this weird logic...
-        console.log(newFollowing);
+        // console.log(newFollowing);
 
         // Okay, lets make a string and send it!
         var sendString = newFollowing.join(',');
